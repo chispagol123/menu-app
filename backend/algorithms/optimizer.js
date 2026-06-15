@@ -151,7 +151,9 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
         return a.recipe.estimated_cost_bob - b.recipe.estimated_cost_bob;
       });
 
-      const chosen = scored[0].recipe;
+      // Elegir al azar entre los mejores candidatos para que Sorpréndeme no repita el mismo menú
+      const topN = Math.min(5, scored.length);
+      const chosen = scored[Math.floor(Math.random() * topN)].recipe;
       menu[d][mealType] = chosen;
       usedRecipeIds.add(chosen.id);
       const p = getProtein(chosen);
