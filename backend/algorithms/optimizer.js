@@ -140,20 +140,22 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
 
       if (finalCandidates.length === 0) continue;
 
-      // Calcular puntaje de reutilización
-      const scored = finalCandidates.map((r) => ({
-        recipe: r,
-        score: reuseScore(r, availableIngredients),
-      }));
-
-      scored.sort((a, b) => {
-        if (b.score !== a.score) return b.score - a.score;
-        return a.recipe.estimated_cost_bob - b.recipe.estimated_cost_bob;
-      });
-
-      // Elegir al azar entre los mejores candidatos para que Sorpréndeme no repita el mismo menú
-      const topN = Math.min(5, scored.length);
-      const chosen = scored[Math.floor(Math.random() * topN)].recipe;
+      // Si no hay selecciones manuales, elegir completamente al azar (Sorpréndeme)
+      // Si hay selecciones manuales, usar el algoritmo anti-desperdicio
+      let chosen;
+      if (manualSelections.length === 0) {
+        chosen = finalCandidates[Math.floor(Math.random() * finalCandidates.length)];
+      } else {
+        const scored = finalCandidates.map((r) => ({
+          recipe: r,
+          score: reuseScore(r, availableIngredients),
+        }));
+        scored.sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return a.recipe.estimated_cost_bob - b.recipe.estimated_cost_bob;
+        });
+        chosen = scored[0].recipe;
+      }
       menu[d][mealType] = chosen;
       usedRecipeIds.add(chosen.id);
       const p = getProtein(chosen);
