@@ -3,7 +3,7 @@ import Setup from "./components/Setup";
 import MenuPlanner from "./components/MenuPlanner";
 import ShoppingList from "./components/ShoppingList";
 
-const STATE_VERSION = 2;
+const STATE_VERSION = 3;
 
 function loadState() {
   try {
