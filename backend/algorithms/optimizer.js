@@ -19,6 +19,7 @@ function filterByPreferences(recipeList, preferences = {}) {
     if (preferences.sinPicante && r.category.includes("picante")) return false;
     if (preferences.rapido && r.time_minutes > 45) return false;
     if (preferences.keto && !r.category.includes("keto")) return false;
+    if (preferences.sinSopa && r.category.includes("sopa")) return false;
     return true;
   });
 }

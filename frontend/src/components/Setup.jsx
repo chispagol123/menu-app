@@ -17,6 +17,7 @@ const PREFERENCES_OPTIONS = [
   { key: "sinPicante", label: "🧊 Sin picante", desc: "Sin ají ni locoto" },
   { key: "rapido", label: "⚡ Rápido", desc: "Solo recetas de menos de 45 min" },
   { key: "keto", label: "🥑 Keto", desc: "Bajo en carbohidratos, alto en grasas saludables" },
+  { key: "sinSopa", label: "🚫🍲 Sin sopas", desc: "No incluir sopas ni caldos en el menú" },
 ];
 
 const CATEGORY_FILTERS = [
