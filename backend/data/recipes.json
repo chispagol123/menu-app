@@ -6841,7 +6841,7 @@
   },
   {
     "id": 97,
-    "name": "Arroz con frijoles",
+    "name": "Arroz con porotos",
     "category": [
       "vegetariano",
       "saludable"
@@ -6862,7 +6862,7 @@
         "cost_per_unit": 2
       },
       {
-        "name": "frijol negro cocido",
+        "name": "poroto negro cocido",
         "quantity": 2,
         "unit": "taza",
         "cost_per_unit": 4
@@ -6895,9 +6895,9 @@
     "steps": [
       "Cocinar el arroz.",
       "Sofreír ajo y cebolla picados en aceite.",
-      "Agregar los frijoles cocidos y salar.",
+      "Agregar los porotos cocidos y salar.",
       "Cocinar 5 minutos revolviendo.",
-      "Servir arroz con frijoles al lado."
+      "Servir arroz con porotos al lado."
     ],
     "estimated_calories": 400
   },
@@ -8933,7 +8933,7 @@
   },
   {
     "id": 129,
-    "name": "Guacamole con totopos",
+    "name": "Guacamole con nachos",
     "category": [
       "vegetariano",
       "vegano",
@@ -8951,7 +8951,7 @@
     "estimated_cost_bob": 28,
     "ingredients": [
       {
-        "name": "aguacate",
+        "name": "palta",
         "quantity": 3,
         "unit": "unidad",
         "cost_per_unit": 5
@@ -8981,16 +8981,16 @@
         "cost_per_unit": 0.5
       },
       {
-        "name": "totopos de maíz",
+        "name": "nachos",
         "quantity": 200,
         "unit": "g",
         "cost_per_unit": 0.05
       }
     ],
     "steps": [
-      "Machacar el aguacate con tenedor.",
+      "Machacar el palta con tenedor.",
       "Agregar tomate, cebolla picados finamente, jugo de limón y sal.",
-      "Mezclar bien y servir inmediatamente con totopos."
+      "Mezclar bien y servir inmediatamente con nachos."
     ],
     "estimated_calories": 240
   },
