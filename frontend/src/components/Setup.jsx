@@ -34,12 +34,21 @@ const CATEGORY_FILTERS = [
   { key: "rápido", label: "⚡ Rápido" },
 ];
 
+const PROTEIN_OPTIONS = [
+  { key: "pollo", label: "🍗 Pollo" },
+  { key: "carne", label: "🥩 Carne de res" },
+  { key: "pescado", label: "🐟 Pescado" },
+  { key: "vegetariano", label: "🥦 Vegetariano" },
+  { key: "huevo", label: "🥚 Huevo" },
+];
+
 export default function Setup({ onGenerate, loading }) {
   const [currentStep, setCurrentStep] = useState(1);
   const [days, setDays] = useState(7);
   const [people, setPeople] = useState(4);
   const [mealTypes, setMealTypes] = useState(["almuerzo", "cena"]);
   const [preferences, setPreferences] = useState({});
+  const [proteinLimits, setProteinLimits] = useState({ pollo: 3, carne: 2, pescado: 1, vegetariano: 2, huevo: 1 });
   const [allRecipes, setAllRecipes] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState("todos");
   const [selectedIds, setSelectedIds] = useState([]);
@@ -97,7 +106,7 @@ export default function Setup({ onGenerate, loading }) {
       const res = await fetch("/api/surprise", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ days, people, preferences, mealTypes }),
+        body: JSON.stringify({ days, people, preferences, mealTypes, proteinLimits }),
       });
       if (!res.ok) {
         alert("Error del servidor: " + res.status);
@@ -127,7 +136,7 @@ export default function Setup({ onGenerate, loading }) {
         }
       }
     }
-    onGenerate(days, people, preferences, manualSelections, mealTypes);
+    onGenerate(days, people, preferences, manualSelections, mealTypes, proteinLimits);
   }
 
   const preferenceFiltered = allRecipes.filter((r) => {
@@ -219,11 +228,43 @@ export default function Setup({ onGenerate, loading }) {
       {/* PASO 2: Preferencias */}
       {currentStep === 2 && (
         <div>
-          <h2 style={{ color: "#2d6a4f", marginBottom: 6 }}>¿Tienes alguna preferencia alimenticia?</h2>
-          <p style={{ color: "#666", fontSize: 14, marginBottom: 24 }}>
-            Selecciona las que aplican. Esto filtra el catálogo de recetas y el botón "Sorpréndeme".
-            Si no tienes restricciones, puedes saltar este paso.
+          <h2 style={{ color: "#2d6a4f", marginBottom: 6 }}>Preferencias y frecuencia</h2>
+          <p style={{ color: "#666", fontSize: 14, marginBottom: 20 }}>
+            Indica cuántas veces por semana quieres cada proteína, y si tienes restricciones alimenticias.
           </p>
+
+          {/* Frecuencia de proteínas */}
+          <div style={{ background: "#fff", border: "1px solid #e5e7eb", borderRadius: 10, padding: 16, marginBottom: 20 }}>
+            <div style={{ fontWeight: 700, fontSize: 15, color: "#2d6a4f", marginBottom: 14 }}>
+              ¿Cuántas veces por semana quieres comer...?
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {PROTEIN_OPTIONS.map((opt) => (
+                <div key={opt.key} style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <span style={{ fontSize: 15 }}>{opt.label}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <button
+                      onClick={() => setProteinLimits((p) => ({ ...p, [opt.key]: Math.max(0, (p[opt.key] ?? 0) - 1) }))}
+                      style={{ width: 32, height: 32, borderRadius: "50%", border: "1px solid #d1d5db", background: "#f9fafb", fontSize: 18, cursor: "pointer", fontWeight: 700 }}
+                    >−</button>
+                    <span style={{ fontWeight: 700, fontSize: 18, minWidth: 24, textAlign: "center" }}>
+                      {proteinLimits[opt.key] ?? 0}
+                    </span>
+                    <button
+                      onClick={() => setProteinLimits((p) => ({ ...p, [opt.key]: Math.min(days, (p[opt.key] ?? 0) + 1) }))}
+                      style={{ width: 32, height: 32, borderRadius: "50%", border: "1px solid #d1d5db", background: "#f9fafb", fontSize: 18, cursor: "pointer", fontWeight: 700 }}
+                    >+</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{ fontSize: 12, color: "#888", marginTop: 12 }}>
+              El botón Sorpréndeme respetará estas cantidades al armar el menú.
+            </div>
+          </div>
+
+          {/* Restricciones */}
+          <div style={{ fontWeight: 700, fontSize: 15, color: "#444", marginBottom: 12 }}>Restricciones alimenticias</div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12, marginBottom: 28 }}>
             {PREFERENCES_OPTIONS.map((opt) => {
               const active = preferences[opt.key];

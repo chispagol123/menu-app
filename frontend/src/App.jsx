@@ -31,7 +31,7 @@ function saveState(step, config, menuData) {
 export default function App() {
   const saved = loadState();
   const [step, setStep] = useState(saved?.step || "setup");
-  const [config, setConfig] = useState(saved?.config || { days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"] });
+  const [config, setConfig] = useState(saved?.config || { days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"], proteinLimits: {} });
   const [menuData, setMenuData] = useState(saved?.menuData || null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -41,17 +41,17 @@ export default function App() {
     saveState(step, config, menuData);
   }, [step, config, menuData]);
 
-  async function handleGenerate(days, people, preferences, manualSelections, mealTypes) {
+  async function handleGenerate(days, people, preferences, manualSelections, mealTypes, proteinLimits) {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch("/api/menu", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ days, people, manualSelections, preferences, mealTypes }),
+        body: JSON.stringify({ days, people, manualSelections, preferences, mealTypes, proteinLimits }),
       });
       const data = await res.json();
-      setConfig({ days, people, preferences, mealTypes: mealTypes || ["almuerzo", "cena"] });
+      setConfig({ days, people, preferences, mealTypes: mealTypes || ["almuerzo", "cena"], proteinLimits: proteinLimits || {} });
       setMenuData(data);
       setStep("menu");
     } catch {
@@ -72,6 +72,7 @@ export default function App() {
           people: config.people,
           preferences: config.preferences,
           mealTypes: config.mealTypes,
+          proteinLimits: config.proteinLimits,
           currentMenu: menuData.menu,
           day,
           mealType,
@@ -91,7 +92,7 @@ export default function App() {
     localStorage.removeItem("menuapp_state");
     setStep("setup");
     setMenuData(null);
-    setConfig({ days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"] });
+    setConfig({ days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"], proteinLimits: {} });
   }
 
   return (

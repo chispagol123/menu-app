@@ -58,11 +58,44 @@ function reuseScore(recipe, availableIngredients) {
   - shoppingList: lista de ingredientes con cantidades y costos
   - totalCost: costo total estimado en Bs.
 */
-function generateMenu(days, people, manualSelections = [], preferences = {}, mealTypes = ["almuerzo", "cena"]) {
+// Detecta la proteína principal de una receta
+function getProtein(recipe) {
+  const cats = recipe.category;
+  if (cats.includes("pollo")) return "pollo";
+  if (cats.includes("carne")) return "carne";
+  if (cats.includes("pescado")) return "pescado";
+  if (cats.includes("vegano")) return "vegano";
+  if (cats.includes("vegetariano")) return "vegetariano";
+  // Detectar recetas de huevo por ingrediente principal
+  const hasEgg = recipe.ingredients.some((i) => i.name.toLowerCase().includes("huevo"));
+  const hasOtherProtein = recipe.ingredients.some((i) =>
+    ["pollo", "carne", "res", "cerdo", "pescado", "atún", "trucha"].some((p) =>
+      i.name.toLowerCase().includes(p)
+    )
+  );
+  if (hasEgg && !hasOtherProtein) return "huevo";
+  return "otro";
+}
+
+function generateMenu(days, people, manualSelections = [], preferences = {}, mealTypes = ["almuerzo", "cena"], proteinLimits = {}) {
   const availableRecipes = filterByPreferences(recipes, preferences);
   const menu = {};
 
-  // Inicializar estructura del menú con los tipos de comida seleccionados
+  // Límites de proteína por defecto si no se especifican
+  const limits = {
+    pollo: proteinLimits.pollo ?? 99,
+    carne: proteinLimits.carne ?? 99,
+    pescado: proteinLimits.pescado ?? 99,
+    vegetariano: proteinLimits.vegetariano ?? 99,
+    vegano: proteinLimits.vegano ?? 99,
+    huevo: proteinLimits.huevo ?? 2, // máx 2 platos de huevo por semana por defecto
+    otro: 99,
+  };
+
+  // Contador de proteínas usadas
+  const proteinCount = { pollo: 0, carne: 0, pescado: 0, vegetariano: 0, vegano: 0, huevo: 0, otro: 0 };
+
+  // Inicializar estructura del menú
   for (let d = 1; d <= days; d++) {
     menu[d] = {};
     for (const mt of mealTypes) menu[d][mt] = null;
@@ -75,6 +108,8 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
     if (recipe && day >= 1 && day <= days && mealTypes.includes(mealType)) {
       menu[day][mealType] = recipe;
       usedRecipeIds.add(recipeId);
+      const p = getProtein(recipe);
+      if (proteinCount[p] !== undefined) proteinCount[p]++;
     }
   });
 
@@ -87,23 +122,30 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
   // Completar los espacios vacíos del menú con el algoritmo
   for (let d = 1; d <= days; d++) {
     for (const mealType of mealTypes) {
-      if (menu[d][mealType] !== null) continue; // ya está elegido
+      if (menu[d][mealType] !== null) continue;
 
-      // Filtrar recetas válidas para este tipo de comida
-      const candidates = availableRecipes.filter(
-        (r) =>
-          r.meal_type.includes(mealType) && !usedRecipeIds.has(r.id)
-      );
+      // Filtrar por tipo de comida, no repetir receta, y respetar límites de proteína
+      const candidates = availableRecipes.filter((r) => {
+        if (!r.meal_type.includes(mealType)) return false;
+        if (usedRecipeIds.has(r.id)) return false;
+        const p = getProtein(r);
+        if ((proteinCount[p] || 0) >= (limits[p] ?? 99)) return false;
+        return true;
+      });
 
-      if (candidates.length === 0) continue;
+      // Si no hay candidatos respetando límites, relajar la restricción de proteína
+      const finalCandidates = candidates.length > 0
+        ? candidates
+        : availableRecipes.filter((r) => r.meal_type.includes(mealType) && !usedRecipeIds.has(r.id));
 
-      // Calcular puntaje de reutilización para cada candidata
-      const scored = candidates.map((r) => ({
+      if (finalCandidates.length === 0) continue;
+
+      // Calcular puntaje de reutilización
+      const scored = finalCandidates.map((r) => ({
         recipe: r,
         score: reuseScore(r, availableIngredients),
       }));
 
-      // Ordenar: primero las de mayor reutilización, luego por costo (menor)
       scored.sort((a, b) => {
         if (b.score !== a.score) return b.score - a.score;
         return a.recipe.estimated_cost_bob - b.recipe.estimated_cost_bob;
@@ -112,8 +154,9 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
       const chosen = scored[0].recipe;
       menu[d][mealType] = chosen;
       usedRecipeIds.add(chosen.id);
+      const p = getProtein(chosen);
+      if (proteinCount[p] !== undefined) proteinCount[p]++;
 
-      // Actualizar ingredientes disponibles con la nueva receta elegida
       chosen.ingredients.forEach((ing) =>
         availableIngredients.add(ing.name.toLowerCase())
       );
