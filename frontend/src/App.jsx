@@ -103,13 +103,16 @@ export default function App() {
           <div style={{ fontWeight: 700, fontSize: 20 }}>¿Qué cocinamos hoy?</div>
           <div style={{ fontSize: 13, opacity: 0.85 }}>Planificador de menú semanal · Bolivia</div>
         </div>
-        {step !== "setup" && (
-          <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
-            <NavBtn active={step === "menu"} onClick={() => setStep("menu")}>📋 Menú</NavBtn>
-            <NavBtn active={step === "shop"} onClick={() => setStep("shop")}>🛒 Lista de compras</NavBtn>
-            <NavBtn onClick={handleNewPlan}>⚙️ Nuevo plan</NavBtn>
-          </div>
-        )}
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8 }}>
+          {step !== "setup" && (
+            <>
+              <NavBtn active={step === "menu"} onClick={() => setStep("menu")}>📋 Menú</NavBtn>
+              <NavBtn active={step === "shop"} onClick={() => setStep("shop")}>🛒 Lista de compras</NavBtn>
+              <NavBtn onClick={handleNewPlan}>⚙️ Nuevo plan</NavBtn>
+            </>
+          )}
+          <span style={{ fontSize: 11, opacity: 0.6, marginLeft: 8 }}>v1.1</span>
+        </div>
       </div>
 
       {error && (
