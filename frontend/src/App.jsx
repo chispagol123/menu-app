@@ -3,19 +3,30 @@ import Setup from "./components/Setup";
 import MenuPlanner from "./components/MenuPlanner";
 import ShoppingList from "./components/ShoppingList";
 
+const STATE_VERSION = 2;
+
 function loadState() {
   try {
     const saved = localStorage.getItem("menuapp_state");
-    if (saved) return JSON.parse(saved);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // Si es una versión vieja sin version o mealTypes, descartarla
+      if (!parsed.version || parsed.version < STATE_VERSION) {
+        localStorage.removeItem("menuapp_state");
+        return null;
+      }
+      return parsed;
+    }
   } catch {}
   return null;
 }
 
 function saveState(step, config, menuData) {
   try {
-    localStorage.setItem("menuapp_state", JSON.stringify({ step, config, menuData }));
+    localStorage.setItem("menuapp_state", JSON.stringify({ version: STATE_VERSION, step, config, menuData }));
   } catch {}
 }
+
 
 export default function App() {
   const saved = loadState();
