@@ -18,6 +18,7 @@ function filterByPreferences(recipeList, preferences = {}) {
     if (preferences.sinGluten && !r.category.includes("sin gluten")) return false;
     if (preferences.sinPicante && r.category.includes("picante")) return false;
     if (preferences.rapido && r.time_minutes > 45) return false;
+    if (preferences.keto && !r.category.includes("keto")) return false;
     return true;
   });
 }
@@ -57,21 +58,21 @@ function reuseScore(recipe, availableIngredients) {
   - shoppingList: lista de ingredientes con cantidades y costos
   - totalCost: costo total estimado en Bs.
 */
-function generateMenu(days, people, manualSelections = [], preferences = {}) {
+function generateMenu(days, people, manualSelections = [], preferences = {}, mealTypes = ["almuerzo", "cena"]) {
   const availableRecipes = filterByPreferences(recipes, preferences);
-  const totalMeals = days * 2; // almuerzo + cena por día
   const menu = {};
 
-  // Inicializar estructura del menú
+  // Inicializar estructura del menú con los tipos de comida seleccionados
   for (let d = 1; d <= days; d++) {
-    menu[d] = { almuerzo: null, cena: null };
+    menu[d] = {};
+    for (const mt of mealTypes) menu[d][mt] = null;
   }
 
   // Colocar las selecciones manuales del usuario
   const usedRecipeIds = new Set();
   manualSelections.forEach(({ day, mealType, recipeId }) => {
     const recipe = availableRecipes.find((r) => r.id === recipeId);
-    if (recipe && day >= 1 && day <= days) {
+    if (recipe && day >= 1 && day <= days && mealTypes.includes(mealType)) {
       menu[day][mealType] = recipe;
       usedRecipeIds.add(recipeId);
     }
@@ -85,7 +86,7 @@ function generateMenu(days, people, manualSelections = [], preferences = {}) {
 
   // Completar los espacios vacíos del menú con el algoritmo
   for (let d = 1; d <= days; d++) {
-    for (const mealType of ["almuerzo", "cena"]) {
+    for (const mealType of mealTypes) {
       if (menu[d][mealType] !== null) continue; // ya está elegido
 
       // Filtrar recetas válidas para este tipo de comida
@@ -122,7 +123,7 @@ function generateMenu(days, people, manualSelections = [], preferences = {}) {
   // Generar lista de compras
   const shoppingMap = {};
   for (let d = 1; d <= days; d++) {
-    for (const mealType of ["almuerzo", "cena"]) {
+    for (const mealType of mealTypes) {
       const recipe = menu[d][mealType];
       if (!recipe) continue;
 

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 const DAY_NAMES = ["", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
-const MEAL_LABEL = { almuerzo: "☀️ Almuerzo", cena: "🌙 Cena" };
+const MEAL_LABEL = { desayuno: "🌅 Desayuno", almuerzo: "☀️ Almuerzo", cena: "🌙 Cena", postre: "🍮 Postre" };
 
-export default function MenuPlanner({ menu, days, people, allRecipes, onSwap, onGoShop, totalCost }) {
+export default function MenuPlanner({ menu, days, people, allRecipes, onSwap, onGoShop, totalCost, mealTypes }) {
+  const activeMealTypes = mealTypes || ["almuerzo", "cena"];
   const [swapModal, setSwapModal] = useState(null); // { day, mealType }
   const [expandedRecipe, setExpandedRecipe] = useState(null);
   const [swapFilter, setSwapFilter] = useState("");
@@ -59,16 +60,19 @@ export default function MenuPlanner({ menu, days, people, allRecipes, onSwap, on
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
         {Array.from({ length: days }, (_, i) => i + 1).map((day) => (
           <div key={day} style={{ background: "#fff", borderRadius: 12, border: "1px solid #e5e7eb", overflow: "hidden" }}>
-            <div style={{ background: "#2d6a4f", color: "#fff", padding: "8px 14px", fontWeight: 700, fontSize: 15 }}>
-              {DAY_NAMES[day] || `Día ${day}`}
+            <div style={{ background: "#2d6a4f", color: "#fff", padding: "8px 14px", fontWeight: 700, fontSize: 15, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span>{DAY_NAMES[day] || `Día ${day}`}</span>
+              <span style={{ fontSize: 12, fontWeight: 400, opacity: 0.85 }}>
+                🔥 {activeMealTypes.reduce((sum, mt) => sum + (menu[day]?.[mt]?.estimated_calories || 0), 0)} kcal
+              </span>
             </div>
-            {["almuerzo", "cena"].map((mealType) => {
+            {activeMealTypes.map((mealType, mtIdx) => {
               const recipe = menu[day]?.[mealType];
               const expanded = expandedRecipe === `${day}-${mealType}`;
               return (
                 <div
                   key={mealType}
-                  style={{ padding: "10px 14px", borderBottom: mealType === "almuerzo" ? "1px solid #f0f0f0" : "none" }}
+                  style={{ padding: "10px 14px", borderBottom: mtIdx < activeMealTypes.length - 1 ? "1px solid #f0f0f0" : "none" }}
                 >
                   <div style={{ fontSize: 12, color: "#888", marginBottom: 4 }}>{MEAL_LABEL[mealType]}</div>
                   {recipe ? (
@@ -80,6 +84,7 @@ export default function MenuPlanner({ menu, days, people, allRecipes, onSwap, on
                             <Tag>⏱ {recipe.time_minutes} min</Tag>
                             <Tag>{recipe.difficulty}</Tag>
                             <Tag>Bs. {recipe.estimated_cost_bob}</Tag>
+                            <Tag>🔥 {recipe.estimated_calories} kcal</Tag>
                           </div>
                         </div>
                         <div style={{ display: "flex", gap: 4, marginLeft: 8 }}>

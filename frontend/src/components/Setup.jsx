@@ -3,16 +3,25 @@ import React, { useState, useEffect } from "react";
 const DAYS_OPTIONS = [3, 5, 7];
 const PEOPLE_OPTIONS = [1, 2, 3, 4, 5, 6, 8, 10];
 
+const MEAL_TYPE_OPTIONS = [
+  { key: "desayuno", label: "🌅 Desayuno" },
+  { key: "almuerzo", label: "☀️ Almuerzo" },
+  { key: "cena", label: "🌙 Cena" },
+  { key: "postre", label: "🍮 Postre" },
+];
+
 const PREFERENCES_OPTIONS = [
   { key: "vegetariano", label: "🥦 Vegetariano", desc: "Sin carne ni pescado" },
   { key: "vegano", label: "🌱 Vegano", desc: "Sin ningún producto animal" },
   { key: "sinGluten", label: "🌾 Sin gluten", desc: "Apto para celíacos" },
   { key: "sinPicante", label: "🧊 Sin picante", desc: "Sin ají ni locoto" },
   { key: "rapido", label: "⚡ Rápido", desc: "Solo recetas de menos de 45 min" },
+  { key: "keto", label: "🥑 Keto", desc: "Bajo en carbohidratos, alto en grasas saludables" },
 ];
 
 const CATEGORY_FILTERS = [
   { key: "todos", label: "Todos" },
+  { key: "desayuno", label: "🌅 Desayuno" },
   { key: "pollo", label: "🍗 Pollo" },
   { key: "carne", label: "🥩 Carne" },
   { key: "sopa", label: "🍲 Sopas" },
@@ -29,13 +38,27 @@ export default function Setup({ onGenerate, loading }) {
   const [currentStep, setCurrentStep] = useState(1);
   const [days, setDays] = useState(7);
   const [people, setPeople] = useState(4);
+  const [mealTypes, setMealTypes] = useState(["almuerzo", "cena"]);
   const [preferences, setPreferences] = useState({});
   const [allRecipes, setAllRecipes] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState("todos");
   const [selectedIds, setSelectedIds] = useState([]);
   const [expandedId, setExpandedId] = useState(null);
 
-  const totalMeals = days * 2;
+  const totalMeals = days * mealTypes.length;
+
+  function toggleMealType(key) {
+    setMealTypes((prev) => {
+      if (prev.includes(key)) {
+        if (prev.length === 1) return prev; // al menos uno debe estar activo
+        return prev.filter((x) => x !== key);
+      }
+      return [...prev, key].sort((a, b) => {
+        const order = ["desayuno", "almuerzo", "cena"];
+        return order.indexOf(a) - order.indexOf(b);
+      });
+    });
+  }
 
   // Cargar todas las recetas una sola vez
   useEffect(() => {
@@ -74,7 +97,7 @@ export default function Setup({ onGenerate, loading }) {
       const res = await fetch("/api/surprise", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ days, people, preferences }),
+        body: JSON.stringify({ days, people, preferences, mealTypes }),
       });
       if (!res.ok) {
         alert("Error del servidor: " + res.status);
@@ -83,7 +106,7 @@ export default function Setup({ onGenerate, loading }) {
       const data = await res.json();
       const ids = [];
       for (let d = 1; d <= days; d++) {
-        for (const mt of ["almuerzo", "cena"]) {
+        for (const mt of mealTypes) {
           if (data.menu[d]?.[mt]) ids.push(data.menu[d][mt].id);
         }
       }
@@ -94,26 +117,27 @@ export default function Setup({ onGenerate, loading }) {
   }
 
   function handleGenerate() {
-    // Distribuir selecciones en días: almuerzo primero, luego cena
     const manualSelections = [];
     let idx = 0;
     for (let d = 1; d <= days; d++) {
-      for (const mt of ["almuerzo", "cena"]) {
+      for (const mt of mealTypes) {
         if (idx < selectedIds.length) {
           manualSelections.push({ day: d, mealType: mt, recipeId: selectedIds[idx] });
           idx++;
         }
       }
     }
-    onGenerate(days, people, preferences, manualSelections);
+    onGenerate(days, people, preferences, manualSelections, mealTypes);
   }
 
   const preferenceFiltered = allRecipes.filter((r) => {
+    if (!r.meal_type.some((mt) => mealTypes.includes(mt))) return false;
     if (preferences.vegetariano && !r.category.includes("vegetariano") && !r.category.includes("vegano")) return false;
     if (preferences.vegano && !r.category.includes("vegano")) return false;
     if (preferences.sinGluten && !r.category.includes("sin gluten")) return false;
     if (preferences.sinPicante && r.category.includes("picante")) return false;
     if (preferences.rapido && r.time_minutes > 45) return false;
+    if (preferences.keto && !r.category.includes("keto")) return false;
     return true;
   });
 
@@ -146,7 +170,7 @@ export default function Setup({ onGenerate, loading }) {
         ))}
       </div>
 
-      {/* PASO 1: Días y personas */}
+      {/* PASO 1: Días, comidas y personas */}
       {currentStep === 1 && (
         <div>
           <h2 style={{ color: "#2d6a4f", marginBottom: 6 }}>¿Cuántos días y personas?</h2>
@@ -159,9 +183,21 @@ export default function Setup({ onGenerate, loading }) {
                 {DAYS_OPTIONS.map((d) => (
                   <ToggleBtn key={d} active={days === d} onClick={() => setDays(d)}>
                     {d} días
-                    <div style={{ fontSize: 11, opacity: 0.7 }}>{d * 2} comidas</div>
+                    <div style={{ fontSize: 11, opacity: 0.7 }}>{d * mealTypes.length} comidas</div>
                   </ToggleBtn>
                 ))}
+              </div>
+            </Card>
+            <Card title="¿Qué comidas quieres planificar?">
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                {MEAL_TYPE_OPTIONS.map((mt) => (
+                  <ToggleBtn key={mt.key} active={mealTypes.includes(mt.key)} onClick={() => toggleMealType(mt.key)}>
+                    {mt.label}
+                  </ToggleBtn>
+                ))}
+              </div>
+              <div style={{ fontSize: 12, color: "#888", marginTop: 8 }}>
+                {totalMeals} comidas por semana
               </div>
             </Card>
             <Card title="¿Cuántas personas comen?">
@@ -271,8 +307,10 @@ export default function Setup({ onGenerate, loading }) {
                 {selectedIds.map((id, i) => {
                   const r = allRecipes.find((x) => x.id === id);
                   if (!r) return null;
-                  const mealType = i % 2 === 0 ? "☀️" : "🌙";
-                  const dayNum = Math.floor(i / 2) + 1;
+                  const mtIcons = { desayuno: "🌅", almuerzo: "☀️", cena: "🌙", postre: "🍮" };
+                  const mtKey = mealTypes[i % mealTypes.length];
+                  const mealTypeIcon = mtIcons[mtKey] || "🍽️";
+                  const dayNum = Math.floor(i / mealTypes.length) + 1;
                   return (
                     <div
                       key={id}
@@ -283,7 +321,7 @@ export default function Setup({ onGenerate, loading }) {
                         padding: "4px 10px", fontSize: 12, cursor: "pointer", display: "flex", gap: 4, alignItems: "center",
                       }}
                     >
-                      <span style={{ color: "#888" }}>D{dayNum}{mealType}</span>
+                      <span style={{ color: "#888" }}>D{dayNum}{mealTypeIcon}</span>
                       <span style={{ fontWeight: 600 }}>{r.name}</span>
                       <span style={{ color: "#ef4444" }}>✕</span>
                     </div>
@@ -343,6 +381,7 @@ export default function Setup({ onGenerate, loading }) {
                         <Tag>⏱ {recipe.time_minutes} min</Tag>
                         <Tag>{recipe.difficulty}</Tag>
                         <Tag>💰 Bs. {recipe.estimated_cost_bob}</Tag>
+                        <Tag>🔥 {recipe.estimated_calories} kcal</Tag>
                       </div>
                       <div style={{ display: "flex", gap: 4, flexWrap: "wrap" }}>
                         {recipe.category.map((c) => (

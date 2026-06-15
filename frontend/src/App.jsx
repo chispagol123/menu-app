@@ -20,7 +20,7 @@ function saveState(step, config, menuData) {
 export default function App() {
   const saved = loadState();
   const [step, setStep] = useState(saved?.step || "setup");
-  const [config, setConfig] = useState(saved?.config || { days: 7, people: 4, preferences: {} });
+  const [config, setConfig] = useState(saved?.config || { days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"] });
   const [menuData, setMenuData] = useState(saved?.menuData || null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -30,17 +30,17 @@ export default function App() {
     saveState(step, config, menuData);
   }, [step, config, menuData]);
 
-  async function handleGenerate(days, people, preferences, manualSelections) {
+  async function handleGenerate(days, people, preferences, manualSelections, mealTypes) {
     setLoading(true);
     setError(null);
     try {
       const res = await fetch("/api/menu", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ days, people, manualSelections, preferences }),
+        body: JSON.stringify({ days, people, manualSelections, preferences, mealTypes }),
       });
       const data = await res.json();
-      setConfig({ days, people, preferences });
+      setConfig({ days, people, preferences, mealTypes: mealTypes || ["almuerzo", "cena"] });
       setMenuData(data);
       setStep("menu");
     } catch {
@@ -60,6 +60,7 @@ export default function App() {
           days: config.days,
           people: config.people,
           preferences: config.preferences,
+          mealTypes: config.mealTypes,
           currentMenu: menuData.menu,
           day,
           mealType,
@@ -79,7 +80,7 @@ export default function App() {
     localStorage.removeItem("menuapp_state");
     setStep("setup");
     setMenuData(null);
-    setConfig({ days: 7, people: 4, preferences: {} });
+    setConfig({ days: 7, people: 4, preferences: {}, mealTypes: ["almuerzo", "cena"] });
   }
 
   return (
@@ -120,6 +121,7 @@ export default function App() {
             days={config.days}
             people={config.people}
             preferences={config.preferences}
+            mealTypes={config.mealTypes}
             onSwap={handleSwap}
             onGoShop={() => setStep("shop")}
             totalCost={menuData.totalCost}

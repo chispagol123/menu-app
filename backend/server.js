@@ -25,7 +25,7 @@ app.get("/api/recipes", (req, res) => {
 
 // Genera el menú con selecciones manuales
 app.post("/api/menu", (req, res) => {
-  const { days, people, manualSelections, preferences } = req.body;
+  const { days, people, manualSelections, preferences, mealTypes } = req.body;
   if (!days || !people) {
     return res.status(400).json({ error: "Faltan parámetros: days y people son requeridos." });
   }
@@ -33,27 +33,29 @@ app.post("/api/menu", (req, res) => {
     Number(days),
     Number(people),
     manualSelections || [],
-    preferences || {}
+    preferences || {},
+    mealTypes || ["almuerzo", "cena"]
   );
   res.json(result);
 });
 
 // Sorpréndeme: genera un menú completamente automático basado en preferencias
 app.post("/api/surprise", (req, res) => {
-  const { days, people, preferences } = req.body;
+  const { days, people, preferences, mealTypes } = req.body;
   if (!days || !people) {
     return res.status(400).json({ error: "Faltan parámetros." });
   }
-  const result = generateMenu(Number(days), Number(people), [], preferences || {});
+  const result = generateMenu(Number(days), Number(people), [], preferences || {}, mealTypes || ["almuerzo", "cena"]);
   res.json(result);
 });
 
 // Intercambiar una receta del menú
 app.post("/api/swap", (req, res) => {
-  const { days, people, currentMenu, day, mealType, newRecipeId, preferences } = req.body;
+  const { days, people, currentMenu, day, mealType, newRecipeId, preferences, mealTypes } = req.body;
+  const activeMealTypes = mealTypes || ["almuerzo", "cena"];
   const manualSelections = [];
   for (let d = 1; d <= days; d++) {
-    for (const mt of ["almuerzo", "cena"]) {
+    for (const mt of activeMealTypes) {
       if (d === day && mt === mealType) {
         manualSelections.push({ day: d, mealType: mt, recipeId: newRecipeId });
       } else if (currentMenu[d] && currentMenu[d][mt]) {
@@ -61,7 +63,7 @@ app.post("/api/swap", (req, res) => {
       }
     }
   }
-  const result = generateMenu(Number(days), Number(people), manualSelections, preferences || {});
+  const result = generateMenu(Number(days), Number(people), manualSelections, preferences || {}, activeMealTypes);
   res.json(result);
 });
 
