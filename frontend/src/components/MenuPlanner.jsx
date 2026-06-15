@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const DAY_NAMES = ["", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 const MEAL_LABEL = { desayuno: "🌅 Desayuno", almuerzo: "☀️ Almuerzo", cena: "🌙 Cena", postre: "🍮 Postre" };
 
-export default function MenuPlanner({ menu, days, people, allRecipes, onSwap, onGoShop, totalCost, mealTypes }) {
+export default function MenuPlanner({ menu, days, people, onSwap, onGoShop, totalCost, mealTypes }) {
   const activeMealTypes = mealTypes || ["almuerzo", "cena"];
+  const [allRecipes, setAllRecipes] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/recipes").then((r) => r.json()).then(setAllRecipes);
+  }, []);
   const [swapModal, setSwapModal] = useState(null); // { day, mealType }
   const [expandedRecipe, setExpandedRecipe] = useState(null);
   const [swapFilter, setSwapFilter] = useState("");
