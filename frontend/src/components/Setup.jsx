@@ -259,8 +259,31 @@ export default function Setup({ onGenerate, loading }) {
                 </div>
               ))}
             </div>
-            <div style={{ fontSize: 12, color: "#888", marginTop: 12 }}>
-              El botón Sorpréndeme respetará estas cantidades al armar el menú.
+            {(() => {
+              const assigned = PROTEIN_OPTIONS.reduce((sum, o) => sum + (proteinLimits[o.key] ?? 0), 0);
+              const mainMeals = days * mealTypes.filter(m => m !== "desayuno" && m !== "postre").length;
+              const over = assigned > mainMeals;
+              const exact = assigned === mainMeals;
+              return (
+                <div style={{
+                  marginTop: 14,
+                  padding: "10px 14px",
+                  borderRadius: 8,
+                  background: over ? "#fee2e2" : exact ? "#d1fae5" : "#f3f4f6",
+                  border: `1px solid ${over ? "#fca5a5" : exact ? "#6ee7b7" : "#e5e7eb"}`,
+                  fontSize: 13,
+                  color: over ? "#991b1b" : exact ? "#065f46" : "#555",
+                }}>
+                  {over
+                    ? `⚠️ Asignaste ${assigned} comidas pero solo hay ${mainMeals} almuerzos/cenas — bajá alguna proteína.`
+                    : exact
+                    ? `✅ Perfecto, ${assigned}/${mainMeals} comidas asignadas.`
+                    : `${assigned}/${mainMeals} comidas asignadas — las ${mainMeals - assigned} restantes las elige el algoritmo libremente.`}
+                </div>
+              );
+            })()}
+            <div style={{ fontSize: 12, color: "#888", marginTop: 8 }}>
+              Solo cuenta almuerzos y cenas. Sorpréndeme respetará estas cantidades.
             </div>
           </div>
 
