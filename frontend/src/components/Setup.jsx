@@ -37,6 +37,7 @@ const CATEGORY_FILTERS = [
 
 const PROTEIN_OPTIONS = [
   { key: "pollo", label: "🍗 Pollo" },
+  { key: "llama", label: "🦙 Carne de llama" },
   { key: "carne", label: "🥩 Carne de res" },
   { key: "pescado", label: "🐟 Pescado" },
   { key: "vegetariano", label: "🥦 Vegetariano" },
@@ -49,7 +50,7 @@ export default function Setup({ onGenerate, loading }) {
   const [people, setPeople] = useState(4);
   const [mealTypes, setMealTypes] = useState(["almuerzo", "cena"]);
   const [preferences, setPreferences] = useState({});
-  const [proteinLimits, setProteinLimits] = useState({ pollo: 3, carne: 2, pescado: 1, vegetariano: 2, huevo: 1 });
+  const [proteinLimits, setProteinLimits] = useState({ pollo: 3, llama: 0, carne: 2, pescado: 1, vegetariano: 2, huevo: 1 });
   const [allRecipes, setAllRecipes] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState("todos");
   const [selectedIds, setSelectedIds] = useState([]);

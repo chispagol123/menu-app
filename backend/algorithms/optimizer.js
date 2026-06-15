@@ -63,6 +63,7 @@ function reuseScore(recipe, availableIngredients) {
 function getProtein(recipe) {
   const cats = recipe.category;
   if (cats.includes("pollo")) return "pollo";
+  if (cats.includes("llama")) return "llama";
   if (cats.includes("carne")) return "carne";
   if (cats.includes("pescado")) return "pescado";
   if (cats.includes("vegano")) return "vegano";
@@ -85,6 +86,7 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
   // Límites de proteína por defecto si no se especifican
   const limits = {
     pollo: proteinLimits.pollo ?? 99,
+    llama: proteinLimits.llama ?? 0,
     carne: proteinLimits.carne ?? 99,
     pescado: proteinLimits.pescado ?? 99,
     vegetariano: proteinLimits.vegetariano ?? 99,
@@ -94,7 +96,7 @@ function generateMenu(days, people, manualSelections = [], preferences = {}, mea
   };
 
   // Contador de proteínas usadas
-  const proteinCount = { pollo: 0, carne: 0, pescado: 0, vegetariano: 0, vegano: 0, huevo: 0, otro: 0 };
+  const proteinCount = { pollo: 0, llama: 0, carne: 0, pescado: 0, vegetariano: 0, vegano: 0, huevo: 0, otro: 0 };
 
   // Inicializar estructura del menú
   for (let d = 1; d <= days; d++) {
