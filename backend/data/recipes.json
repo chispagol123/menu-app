@@ -1,0 +1,1912 @@
+[
+  {
+    "id": 1,
+    "name": "Silpancho",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "carne molida", "quantity": 500, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pan molido", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz con agua y sal.",
+      "Pelar y hervir las papas hasta que estén tiernas.",
+      "Aplanar la carne molida en forma de milanesa fina, pasar por pan molido.",
+      "Freír la carne en aceite caliente hasta dorar ambos lados.",
+      "Freír los huevos.",
+      "Servir el arroz, la papa rebanada, la carne y el huevo encima. Acompañar con ensalada de tomate y cebolla."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sopa de maní",
+    "category": ["sopa", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 60,
+    "difficulty": "media",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "carne de res", "quantity": 400, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "maní tostado", "quantity": 200, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir la carne en agua con sal hasta ablandar. Reservar el caldo.",
+      "Licuar el maní tostado con un poco de caldo hasta obtener una pasta.",
+      "Sofreír cebolla y ajo picados en aceite.",
+      "Agregar la pasta de maní al sofrito y mezclar.",
+      "Añadir el caldo, la papa y la zanahoria en cubos.",
+      "Cocinar 20 minutos hasta que las verduras estén tiernas.",
+      "Servir con perejil picado encima."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Fricasé de cerdo",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 90,
+    "difficulty": "difícil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 55,
+    "ingredients": [
+      { "name": "costilla de cerdo", "quantity": 600, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "chuño", "quantity": 4, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "mote", "quantity": 1, "unit": "taza", "cost_per_unit": 5 },
+      { "name": "ají amarillo", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar el chuño la noche anterior. Escurrir y exprimir bien.",
+      "Sofreír la carne con cebolla, ajo y ají hasta dorar.",
+      "Agregar agua hasta cubrir y cocinar 45 minutos.",
+      "Añadir el chuño y el mote. Condimentar con sal, pimienta y orégano.",
+      "Cocinar 20 minutos más hasta que todo esté tierno.",
+      "Servir caliente en plato hondo."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Arroz con pollo",
+    "category": ["pollo", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 40,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír el pollo en trozos con cebolla y ajo hasta dorar.",
+      "Agregar zanahoria en rodajas y arveja. Mezclar.",
+      "Añadir el arroz y sofreír 2 minutos.",
+      "Agregar agua caliente (doble del volumen del arroz), sal y comino.",
+      "Cocinar a fuego bajo con tapa hasta que el arroz absorba el agua.",
+      "Servir caliente."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sopa de pollo con verduras",
+    "category": ["sopa", "pollo", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 55,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "pollo", "quantity": 500, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 },
+      { "name": "fideos finos", "quantity": 100, "unit": "g", "cost_per_unit": 0.04 }
+    ],
+    "steps": [
+      "Hervir el pollo con cebolla y ajo durante 30 minutos.",
+      "Retirar el pollo, deshuesar y desmenuzar.",
+      "Volver a poner el pollo al caldo con papa y zanahoria en cubos.",
+      "Cocinar 15 minutos. Agregar fideos y cocinar 5 minutos más.",
+      "Ajustar sal y servir con perejil picado."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Majadito de charque",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 42,
+    "ingredients": [
+      { "name": "charque (carne seca)", "quantity": 300, "unit": "g", "cost_per_unit": 0.12 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "plátano maduro", "quantity": 2, "unit": "unidad", "cost_per_unit": 3 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Remojar el charque en agua durante 30 minutos. Escurrir y desmenuzar.",
+      "Sofreír cebolla y tomate picados. Agregar el charque y mezclar.",
+      "Añadir el arroz y agua. Cocinar hasta que el arroz esté listo.",
+      "Freír los huevos y los plátanos maduros por separado.",
+      "Servir el arroz con charque, huevo frito y plátano al lado."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Lomo saltado",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 50,
+    "ingredients": [
+      { "name": "lomo de res", "quantity": 500, "unit": "g", "cost_per_unit": 0.1 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "salsa de soja", "quantity": 3, "unit": "cda", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar el arroz aparte con agua y sal.",
+      "Freír las papas en bastones hasta dorar. Reservar.",
+      "Saltear la carne en tiras a fuego alto con aceite.",
+      "Agregar cebolla en plumas y tomate en gajos. Saltear 2 minutos.",
+      "Añadir salsa de soja, sal y pimienta.",
+      "Servir sobre arroz con las papas fritas al lado."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Pollo al horno con papas",
+    "category": ["pollo", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 70,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "pollo", "quantity": 800, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "papa", "quantity": 5, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "ajo", "quantity": 4, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "limón", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Marinar el pollo con ajo, limón, aceite, orégano, sal y pimienta por 20 minutos.",
+      "Pelar y cortar las papas en cuartos.",
+      "Colocar el pollo y las papas en una fuente para horno.",
+      "Hornear a 180°C durante 50 minutos, volteando a mitad de cocción.",
+      "Servir caliente."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sajta de pollo",
+    "category": ["pollo", "tradicional", "picante"],
+    "servings_base": 4,
+    "time_minutes": 60,
+    "difficulty": "media",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "pollo", "quantity": 700, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "chuño", "quantity": 4, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "ají amarillo", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar el chuño la noche anterior. Escurrir y exprimir.",
+      "Hervir el pollo en agua con sal. Reservar caldo.",
+      "Licuar los ajíes remojados con un poco de caldo.",
+      "Sofreír cebolla y ajo. Agregar la pasta de ají.",
+      "Añadir el pollo hervido y el chuño. Cocinar 15 minutos.",
+      "Servir con perejil picado."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Churrasco a la boliviana",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 52,
+    "ingredients": [
+      { "name": "lomo de res", "quantity": 500, "unit": "g", "cost_per_unit": 0.1 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "locoto", "quantity": 1, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Freír o asar la carne en filete. Salar al gusto.",
+      "Hervir o freír las papas.",
+      "Freír los huevos.",
+      "Preparar llajwa con tomate, locoto y sal (molida en batán o licuadora).",
+      "Servir carne, papa y huevo con la llajwa al lado."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Sopa de quinua",
+    "category": ["sopa", "saludable", "vegetariano"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "quinua", "quantity": 1, "unit": "taza", "cost_per_unit": 8 },
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Lavar bien la quinua varias veces hasta que el agua salga clara.",
+      "Sofreír cebolla y ajo picados.",
+      "Añadir agua, quinua, papa y zanahoria en cubos.",
+      "Cocinar 25 minutos a fuego medio.",
+      "Ajustar sal y servir con perejil."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Pique macho",
+    "category": ["carne", "tradicional", "picante"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 55,
+    "ingredients": [
+      { "name": "lomo de res", "quantity": 400, "unit": "g", "cost_per_unit": 0.1 },
+      { "name": "salchicha", "quantity": 200, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "huevo", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "locoto", "quantity": 2, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Freír las papas en bastones. Reservar.",
+      "Saltear la carne en trozos y la salchicha en rodajas a fuego alto.",
+      "Agregar cebolla, tomate y locoto en trozos. Saltear.",
+      "Añadir las papas fritas y mezclar todo.",
+      "Colocar los huevos encima (fritos o duros) y servir en la sartén."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Ensalada de quinua",
+    "category": ["saludable", "vegetariano", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 30,
+    "ingredients": [
+      { "name": "quinua", "quantity": 1, "unit": "taza", "cost_per_unit": 8 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pepino", "quantity": 1, "unit": "unidad", "cost_per_unit": 3 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "limón", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar la quinua lavada en agua con sal durante 15 minutos. Enfriar.",
+      "Picar tomate, pepino y cebolla en cubos pequeños.",
+      "Mezclar quinua con las verduras.",
+      "Aderezar con limón, aceite, sal y perejil picado.",
+      "Servir fría."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Locro de gallina",
+    "category": ["sopa", "pollo", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 70,
+    "difficulty": "media",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 42,
+    "ingredients": [
+      { "name": "pollo", "quantity": 700, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arroz", "quantity": 1, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir el pollo con cebolla, ajo y sal durante 35 minutos.",
+      "Agregar papa, zanahoria y arroz al caldo.",
+      "Cocinar 25 minutos más hasta que todo esté tierno.",
+      "Ajustar sal y servir con perejil."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Relleno de papas",
+    "category": ["vegetariano", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 32,
+    "ingredients": [
+      { "name": "papa", "quantity": 8, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 150, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "harina", "quantity": 4, "unit": "cda", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Hervir las papas hasta que estén bien tiernas. Pelar y aplastar.",
+      "Mezclar el puré de papa con harina, sal y un huevo para hacer masa.",
+      "Sofreír cebolla. Añadir el queso desmenuzado.",
+      "Formar tortitas de papa, rellenar con la mezcla de queso.",
+      "Freír los rellenos en aceite caliente hasta dorar.",
+      "Servir con huevo frito."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sopa de verduras",
+    "category": ["sopa", "saludable", "vegetariano", "vegano"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 22,
+    "ingredients": [
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla y ajo picados.",
+      "Añadir agua, papa y zanahoria en cubos.",
+      "Agregar arveja y cocinar 25 minutos.",
+      "Ajustar sal y servir con perejil."
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Fideos a la crema con pollo",
+    "category": ["pollo", "pasta"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "crema de leche", "quantity": 200, "unit": "ml", "cost_per_unit": 0.05 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar los fideos en agua con sal hasta que estén al dente. Escurrir.",
+      "Saltear el pollo en trozos con cebolla y ajo.",
+      "Agregar la crema de leche y cocinar 5 minutos.",
+      "Mezclar con los fideos cocidos.",
+      "Ajustar sal y pimienta. Servir caliente."
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Arroz con leche (postre)",
+    "category": ["postre", "vegetariano"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "fácil",
+    "meal_type": ["cena"],
+    "estimated_cost_bob": 18,
+    "ingredients": [
+      { "name": "arroz", "quantity": 1, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "leche", "quantity": 1, "unit": "litro", "cost_per_unit": 7 },
+      { "name": "azúcar", "quantity": 4, "unit": "cda", "cost_per_unit": 0.5 },
+      { "name": "canela en rama", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "clavo de olor", "quantity": 3, "unit": "unidad", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz en agua hasta que esté suave.",
+      "Agregar la leche, el azúcar, la canela y el clavo.",
+      "Cocinar a fuego lento 20 minutos removiendo constantemente.",
+      "Servir tibio o frío espolvoreado con canela molida."
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Guiso de lentejas",
+    "category": ["vegetariano", "saludable", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 25,
+    "ingredients": [
+      { "name": "lentejas", "quantity": 300, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar las lentejas 30 minutos. Escurrir.",
+      "Sofreír cebolla, ajo y tomate picados.",
+      "Agregar las lentejas, zanahoria en rodajas y agua suficiente.",
+      "Condimentar con sal y comino.",
+      "Cocinar 35 minutos hasta que las lentejas estén tiernas.",
+      "Servir con arroz o pan."
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Tostadas con huevo revuelto",
+    "category": ["vegetariano", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 15,
+    "difficulty": "fácil",
+    "meal_type": ["cena"],
+    "estimated_cost_bob": 20,
+    "ingredients": [
+      { "name": "huevo", "quantity": 6, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pan de molde", "quantity": 8, "unit": "rebanada", "cost_per_unit": 1 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 1, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Tostar el pan.",
+      "Sofreír cebolla y tomate picados.",
+      "Agregar los huevos batidos y revolver hasta cuajar.",
+      "Servir los huevos sobre las tostadas."
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Pollo a la brasa casero",
+    "category": ["pollo", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 80,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 50,
+    "ingredients": [
+      { "name": "pollo", "quantity": 1000, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "ajo", "quantity": 5, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "limón", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "orégano", "quantity": 2, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 }
+    ],
+    "steps": [
+      "Preparar marinada con ajo molido, limón, orégano, comino, sal y pimienta.",
+      "Marinar el pollo entero al menos 2 horas (ideal: noche anterior).",
+      "Hornear a 200°C durante 60 minutos, volteando a mitad.",
+      "Freír o hornear las papas como acompañamiento.",
+      "Servir con ensalada."
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Papas a la huancaína",
+    "category": ["vegetariano", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "papa", "quantity": 6, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "queso fresco", "quantity": 200, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "ají amarillo", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "leche", "quantity": 100, "unit": "ml", "cost_per_unit": 7 },
+      { "name": "huevo", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir las papas con cáscara hasta cocinar. Pelar y rebanar.",
+      "Licuar queso, ají amarillo, leche, aceite y sal hasta obtener salsa cremosa.",
+      "Colocar las papas en plato y bañar con la salsa.",
+      "Decorar con huevo duro en rodajas."
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Estofado de pollo",
+    "category": ["pollo", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 55,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 42,
+    "ingredients": [
+      { "name": "pollo", "quantity": 700, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Sofreír cebolla, ajo y tomate picados.",
+      "Agregar el pollo en trozos y dorar.",
+      "Añadir zanahoria, arveja y papa en cubos.",
+      "Cubrir con agua y cocinar 35 minutos.",
+      "Ajustar sal y servir con arroz."
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Sopa de arroz con verduras",
+    "category": ["sopa", "vegetariano", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 20,
+    "ingredients": [
+      { "name": "arroz", "quantity": 1, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla y ajo picados.",
+      "Añadir agua, arroz y zanahoria en rodajas.",
+      "Cocinar 20 minutos.",
+      "Ajustar sal y servir con perejil."
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Milanesa de pollo",
+    "category": ["pollo", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "pan molido", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "huevo", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "harina", "quantity": 4, "unit": "cda", "cost_per_unit": 0.5 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "limón", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Aplanar las pechugas de pollo.",
+      "Pasar por harina, huevo batido y pan molido.",
+      "Freír en aceite caliente hasta dorar ambos lados.",
+      "Cocinar arroz aparte.",
+      "Servir la milanesa con arroz y limón."
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Tallarín rojo con carne",
+    "category": ["carne", "pasta"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "carne molida", "quantity": 300, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar los fideos en agua con sal. Escurrir.",
+      "Sofreír cebolla y ajo. Agregar la carne molida y dorar.",
+      "Añadir tomate picado y cocinar 10 minutos.",
+      "Condimentar con orégano y sal.",
+      "Mezclar con los fideos y servir."
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Trucha a la plancha",
+    "category": ["pescado", "saludable", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 55,
+    "ingredients": [
+      { "name": "trucha", "quantity": 800, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "limón", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Marinar la trucha con limón, ajo molido y sal por 15 minutos.",
+      "Cocinar a la plancha con un poco de aceite, 5 minutos por lado.",
+      "Hervir las papas como acompañamiento.",
+      "Servir con limón y perejil."
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Picante de pollo",
+    "category": ["pollo", "tradicional", "picante"],
+    "servings_base": 4,
+    "time_minutes": 65,
+    "difficulty": "difícil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "pollo", "quantity": 800, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "ají colorado", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "chuño", "quantity": 4, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "maní tostado", "quantity": 100, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar el ají colorado. Licuar con un poco de agua.",
+      "Remojar el chuño la noche anterior. Exprimir bien.",
+      "Hervir el pollo. Reservar caldo.",
+      "Sofreír cebolla y ajo. Agregar la pasta de ají.",
+      "Añadir el pollo, el chuño y el maní molido.",
+      "Cocinar 20 minutos con caldo. Condimentar con orégano y sal.",
+      "Servir con arroz blanco."
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Pasta carbonara",
+    "category": ["pasta", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 42,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tocino", "quantity": 200, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "queso parmesano", "quantity": 100, "unit": "g", "cost_per_unit": 0.15 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar los fideos en agua con sal hasta que estén al dente.",
+      "Dorar el tocino en cubos en una sartén. Agregar el ajo.",
+      "Batir los huevos con el queso rallado y pimienta.",
+      "Escurrir los fideos reservando un poco de agua de cocción.",
+      "Mezclar los fideos calientes con el tocino. Retirar del fuego.",
+      "Agregar la mezcla de huevo y queso, revolver rápido para que no cuaje.",
+      "Añadir agua de cocción si hace falta para que quede cremoso."
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Tacos de pollo",
+    "category": ["pollo", "internacional", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 40,
+    "ingredients": [
+      { "name": "pollo", "quantity": 500, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "tortilla de maíz", "quantity": 12, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "limón", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Condimentar el pollo con ajo, comino, sal y limón.",
+      "Cocinar el pollo en sartén con aceite hasta dorar. Desmenuzar.",
+      "Picar tomate y cebolla finamente para la salsa fresca.",
+      "Calentar las tortillas en sartén seca.",
+      "Armar los tacos con pollo y salsa fresca."
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Wok de verduras con arroz",
+    "category": ["vegetariano", "vegano", "saludable", "sin gluten", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "salsa de soja", "quantity": 3, "unit": "cda", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz aparte con agua y sal.",
+      "Calentar aceite a fuego alto en sartén o wok.",
+      "Saltear ajo y cebolla 1 minuto.",
+      "Agregar zanahoria en juliana y arveja. Saltear 3 minutos.",
+      "Añadir salsa de soja y mezclar bien.",
+      "Servir sobre el arroz."
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Albóndigas en salsa de tomate",
+    "category": ["carne", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "carne molida", "quantity": 500, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "huevo", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pan molido", "quantity": 4, "unit": "cda", "cost_per_unit": 4 },
+      { "name": "tomate", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "fideos", "quantity": 300, "unit": "g", "cost_per_unit": 0.04 }
+    ],
+    "steps": [
+      "Mezclar carne molida con huevo, pan molido y sal. Formar albóndigas.",
+      "Dorar las albóndigas en aceite por todos lados. Reservar.",
+      "En la misma sartén, sofreír cebolla y ajo picados.",
+      "Agregar tomate triturado y orégano. Cocinar 10 minutos.",
+      "Devolver las albóndigas a la salsa y cocinar 15 minutos más.",
+      "Servir sobre fideos cocidos."
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Pollo teriyaki con arroz",
+    "category": ["pollo", "internacional", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "salsa de soja", "quantity": 4, "unit": "cda", "cost_per_unit": 2 },
+      { "name": "azúcar", "quantity": 2, "unit": "cda", "cost_per_unit": 0.5 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Mezclar salsa de soja, azúcar y ajo picado para la salsa teriyaki.",
+      "Marinar el pollo en la salsa 15 minutos.",
+      "Cocinar el arroz aparte.",
+      "Dorar el pollo en aceite a fuego medio-alto.",
+      "Agregar el resto de la marinada y cocinar hasta que caramelice.",
+      "Servir sobre arroz con zanahoria en juliana salteada."
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Omelette de verduras",
+    "category": ["vegetariano", "saludable", "rápido", "sin gluten"],
+    "servings_base": 2,
+    "time_minutes": 15,
+    "difficulty": "fácil",
+    "meal_type": ["cena"],
+    "estimated_cost_bob": 18,
+    "ingredients": [
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 80, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "aceite", "quantity": 1, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Picar tomate y cebolla finamente.",
+      "Batir los huevos con sal.",
+      "Calentar aceite en sartén antiadherente.",
+      "Verter los huevos y dejar cuajar los bordes.",
+      "Agregar tomate, cebolla y queso desmenuzado en el centro.",
+      "Doblar el omelette por la mitad y servir."
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Arroz chaufa",
+    "category": ["internacional", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "huevo", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "salsa de soja", "quantity": 3, "unit": "cda", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz con anticipación y dejar enfriar (ideal del día anterior).",
+      "Calentar aceite a fuego alto. Saltear ajo y cebolla.",
+      "Agregar zanahoria en cubos pequeños y saltear 2 minutos.",
+      "Hacer espacio en la sartén y scramble los huevos.",
+      "Agregar el arroz frío y mezclar todo.",
+      "Añadir salsa de soja, saltear 2 minutos más y servir."
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Curry de pollo",
+    "category": ["pollo", "internacional", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 50,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "leche", "quantity": 400, "unit": "ml", "cost_per_unit": 0.007 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "curry en polvo", "quantity": 2, "unit": "cdita", "cost_per_unit": 3 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz aparte.",
+      "Sofreír cebolla y ajo. Agregar el curry en polvo y mezclar 1 minuto.",
+      "Añadir el pollo en trozos y dorar.",
+      "Incorporar tomate picado y la leche.",
+      "Cocinar a fuego medio 25 minutos hasta que la salsa espese.",
+      "Servir sobre el arroz."
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Sopa de tomate",
+    "category": ["sopa", "vegetariano", "vegano", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 22,
+    "ingredients": [
+      { "name": "tomate", "quantity": 6, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "pan de molde", "quantity": 4, "unit": "rebanada", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla y ajo picados en aceite.",
+      "Agregar tomates en trozos y cocinar 10 minutos hasta deshacer.",
+      "Licuar todo hasta obtener crema suave.",
+      "Devolver al fuego, condimentar con orégano y sal.",
+      "Cocinar 5 minutos más y servir con pan tostado."
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Hamburguesa casera",
+    "category": ["carne", "internacional", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 50,
+    "ingredients": [
+      { "name": "carne molida", "quantity": 500, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "pan de hamburguesa", "quantity": 4, "unit": "unidad", "cost_per_unit": 4 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 100, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "lechuga", "quantity": 1, "unit": "unidad", "cost_per_unit": 5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Mezclar la carne molida con sal y pimienta. Formar 4 hamburguesas.",
+      "Cocinar a la plancha o sartén 3-4 minutos por lado.",
+      "Tostar los panes.",
+      "Armar la hamburguesa con lechuga, tomate, cebolla y queso."
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Ensalada César con pollo",
+    "category": ["pollo", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "lechuga", "quantity": 1, "unit": "unidad", "cost_per_unit": 5 },
+      { "name": "queso parmesano", "quantity": 80, "unit": "g", "cost_per_unit": 0.15 },
+      { "name": "pan de molde", "quantity": 3, "unit": "rebanada", "cost_per_unit": 1 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "limón", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el pollo en sartén con ajo, sal y aceite. Dejar enfriar y cortar en tiras.",
+      "Cortar el pan en cubos y tostar en sartén con aceite (crutones).",
+      "Preparar aderezo: mezclar limón, aceite, ajo molido y sal.",
+      "Trozar la lechuga y mezclar con el aderezo.",
+      "Añadir el pollo, los crutones y el queso rallado por encima."
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Fideos con pesto de albahaca",
+    "category": ["pasta", "vegetariano", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 20,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "albahaca fresca", "quantity": 1, "unit": "ramita", "cost_per_unit": 3 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "queso parmesano", "quantity": 80, "unit": "g", "cost_per_unit": 0.15 },
+      { "name": "aceite", "quantity": 4, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar los fideos en agua con sal hasta al dente.",
+      "Licuar albahaca, ajo, queso, aceite, sal y pimienta hasta obtener pesto.",
+      "Mezclar los fideos escurridos con el pesto.",
+      "Servir con queso extra rallado por encima."
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Caldo de res con verduras",
+    "category": ["sopa", "tradicional", "saludable", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 80,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 40,
+    "ingredients": [
+      { "name": "carne de res", "quantity": 500, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "papa", "quantity": 3, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir la carne con cebolla, ajo y sal durante 45 minutos.",
+      "Agregar papa y zanahoria en trozos.",
+      "Cocinar 25 minutos más hasta que las verduras estén tiernas.",
+      "Servir con perejil picado."
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Pizza casera",
+    "category": ["internacional", "vegetariano"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "harina", "quantity": 3, "unit": "taza", "cost_per_unit": 0.5 },
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 200, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 }
+    ],
+    "steps": [
+      "Mezclar harina, sal, aceite y agua tibia hasta formar masa. Reposar 20 minutos.",
+      "Estirar la masa en forma circular.",
+      "Licuar tomate con sal para la salsa. Extender sobre la masa.",
+      "Agregar queso desmenuzado, cebolla en aros y orégano.",
+      "Hornear a 200°C durante 20 minutos hasta que los bordes doren."
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Chairo paceño",
+    "category": ["sopa", "tradicional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 90,
+    "difficulty": "difícil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "carne de res", "quantity": 400, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "chuño", "quantity": 4, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "mote", "quantity": 1, "unit": "taza", "cost_per_unit": 5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "papa", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar el chuño la noche anterior. Exprimir bien.",
+      "Hervir la carne con cebolla y ajo 45 minutos. Reservar caldo.",
+      "Agregar chuño, mote, papa y zanahoria al caldo.",
+      "Condimentar con orégano y sal.",
+      "Cocinar 30 minutos más hasta que todo esté tierno.",
+      "Servir con perejil picado."
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Charquekan",
+    "category": ["carne", "tradicional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 30,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 50,
+    "ingredients": [
+      { "name": "charque (carne seca)", "quantity": 300, "unit": "g", "cost_per_unit": 0.12 },
+      { "name": "chuño", "quantity": 4, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "mote", "quantity": 1, "unit": "taza", "cost_per_unit": 5 },
+      { "name": "huevo", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 150, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Remojar el chuño. Hervir hasta ablandar.",
+      "Freír el charque desmenuzado hasta que esté crocante.",
+      "Cocinar el mote aparte.",
+      "Freír los huevos.",
+      "Servir el charque con chuño, mote, huevo frito y queso.",
+      "Acompañar con ensalada de tomate y cebolla."
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Saice tarijeño",
+    "category": ["carne", "tradicional", "picante"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "media",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "carne molida", "quantity": 500, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "ají colorado", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar el ají colorado y licuar con un poco de agua.",
+      "Sofreír cebolla, ajo y tomate. Agregar la pasta de ají.",
+      "Añadir la carne molida y dorar bien.",
+      "Incorporar arveja y papa en cubos.",
+      "Condimentar con comino y sal. Cubrir con agua.",
+      "Cocinar 25 minutos hasta que las papas estén tiernas.",
+      "Servir con arroz blanco."
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Chicharrón de cerdo",
+    "category": ["carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 60,
+    "difficulty": "media",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 58,
+    "ingredients": [
+      { "name": "costilla de cerdo", "quantity": 800, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "mote", "quantity": 1, "unit": "taza", "cost_per_unit": 5 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "locoto", "quantity": 1, "unit": "unidad", "cost_per_unit": 1 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "limón", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 }
+    ],
+    "steps": [
+      "Hervir la carne de cerdo con sal y ajo hasta ablandar.",
+      "Freír en su propia grasa hasta que esté dorado y crocante.",
+      "Hervir el mote aparte hasta ablandar.",
+      "Preparar llajwa con tomate, locoto y sal.",
+      "Servir el chicharrón con mote y cebolla en aros.",
+      "Acompañar con llajwa y limón."
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Crema de zapallo",
+    "category": ["sopa", "vegetariano", "vegano", "saludable", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 24,
+    "ingredients": [
+      { "name": "zapallo", "quantity": 600, "unit": "g", "cost_per_unit": 0.02 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "pan de molde", "quantity": 4, "unit": "rebanada", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Pelar y cortar el zapallo en cubos.",
+      "Sofreír cebolla y ajo en aceite.",
+      "Agregar el zapallo y cubrir con agua.",
+      "Cocinar 20 minutos hasta que esté muy tierno.",
+      "Licuar todo hasta obtener crema suave.",
+      "Ajustar sal y pimienta. Servir con pan tostado."
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Pasta boloñesa",
+    "category": ["carne", "pasta", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 40,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "carne molida", "quantity": 400, "unit": "g", "cost_per_unit": 0.07 },
+      { "name": "tomate", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Sofreír cebolla, ajo y zanahoria rallada en aceite.",
+      "Agregar la carne molida y dorar.",
+      "Añadir tomate triturado, orégano y sal.",
+      "Cocinar a fuego bajo 25 minutos.",
+      "Cocinar los fideos aparte al dente.",
+      "Servir la salsa sobre los fideos."
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Tortilla española de papa",
+    "category": ["vegetariano", "saludable", "internacional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "papa", "quantity": 5, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "huevo", "quantity": 5, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 4, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Pelar y cortar las papas en rodajas finas.",
+      "Freír las papas y la cebolla en aceite a fuego medio hasta tiernizar.",
+      "Escurrir el exceso de aceite.",
+      "Batir los huevos con sal. Mezclar con las papas.",
+      "Cocinar en sartén antiadherente a fuego bajo hasta que cuaje.",
+      "Dar vuelta con un plato y dorar el otro lado."
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Quesadillas de pollo",
+    "category": ["pollo", "internacional", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "tortilla de maíz", "quantity": 8, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "queso fresco", "quantity": 200, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 1, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar el pollo con sal y comino. Desmenuzar.",
+      "Colocar una tortilla en sartén caliente.",
+      "Agregar queso, pollo, cebolla y tomate en un lado.",
+      "Doblar la tortilla y cocinar hasta dorar.",
+      "Repetir con las demás tortillas."
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Shakshuka",
+    "category": ["vegetariano", "saludable", "internacional", "sin gluten", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 26,
+    "ingredients": [
+      { "name": "huevo", "quantity": 6, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 4, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "ají amarillo", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pan de molde", "quantity": 4, "unit": "rebanada", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla, ajo y ají picados en aceite.",
+      "Agregar tomate triturado, comino y sal.",
+      "Cocinar 10 minutos hasta formar una salsa espesa.",
+      "Hacer huecos en la salsa y romper los huevos dentro.",
+      "Tapar y cocinar 5 minutos hasta que las claras cuajen.",
+      "Servir con pan."
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Fideos con atún",
+    "category": ["pasta", "pescado", "rápido", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 20,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 32,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "atún en lata", "quantity": 2, "unit": "unidad", "cost_per_unit": 8 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar los fideos al dente. Escurrir.",
+      "Sofreír cebolla y ajo. Agregar tomate picado.",
+      "Cocinar 5 minutos. Agregar el atún escurrido.",
+      "Mezclar con los fideos y condimentar con orégano."
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Milanesa napolitana",
+    "category": ["carne", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 55,
+    "ingredients": [
+      { "name": "lomo de res", "quantity": 500, "unit": "g", "cost_per_unit": 0.1 },
+      { "name": "pan molido", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "huevo", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 150, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "harina", "quantity": 3, "unit": "cda", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Aplanar la carne en filetes finos.",
+      "Pasar por harina, huevo batido y pan molido.",
+      "Freír en aceite caliente hasta dorar.",
+      "Colocar rodajas de tomate y queso encima.",
+      "Gratinar en horno 5 minutos.",
+      "Servir con orégano y arroz o papas."
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Pollo a la naranja",
+    "category": ["pollo", "saludable", "internacional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "pollo", "quantity": 700, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "naranja", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "azúcar", "quantity": 1, "unit": "cda", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz aparte.",
+      "Marinar el pollo con jugo de naranja, ajo, sal y pimienta 20 minutos.",
+      "Dorar el pollo en aceite por ambos lados.",
+      "Agregar el resto de la marinada y azúcar.",
+      "Cocinar 15 minutos hasta que la salsa caramelice.",
+      "Servir sobre arroz."
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Sopa minestrone",
+    "category": ["sopa", "vegetariano", "vegano", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "papa", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "fideos finos", "quantity": 100, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla, ajo y tomate picados.",
+      "Agregar agua, zanahoria y papa en cubos.",
+      "Cocinar 20 minutos. Añadir arveja y fideos.",
+      "Condimentar con orégano y sal.",
+      "Cocinar 10 minutos más y servir."
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Ensalada griega",
+    "category": ["vegetariano", "saludable", "sin gluten", "internacional", "rápido"],
+    "servings_base": 4,
+    "time_minutes": 15,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pepino", "quantity": 1, "unit": "unidad", "cost_per_unit": 3 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "queso fresco", "quantity": 150, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "limón", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cortar tomate, pepino y cebolla en trozos.",
+      "Agregar queso desmenuzado.",
+      "Aderezar con aceite, limón, orégano y sal.",
+      "Mezclar y servir fría."
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Pollo con champiñones",
+    "category": ["pollo", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 40,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 52,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "champiñones", "quantity": 300, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "crema de leche", "quantity": 200, "unit": "ml", "cost_per_unit": 0.05 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 }
+    ],
+    "steps": [
+      "Cocinar el arroz aparte.",
+      "Dorar el pollo en trozos con sal y pimienta. Reservar.",
+      "En la misma sartén sofreír cebolla y ajo.",
+      "Agregar champiñones en láminas y saltear 5 minutos.",
+      "Añadir la crema de leche y el pollo. Cocinar 10 minutos.",
+      "Servir sobre arroz."
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Wrap de pollo y verduras",
+    "category": ["pollo", "saludable", "rápido", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 20,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "tortilla de maíz", "quantity": 8, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "lechuga", "quantity": 1, "unit": "unidad", "cost_per_unit": 5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "limón", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 1, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el pollo con sal y limón. Cortar en tiras.",
+      "Rallar la zanahoria. Picar lechuga y tomate.",
+      "Calentar las tortillas.",
+      "Rellenar cada tortilla con pollo y verduras.",
+      "Enrollar y servir."
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Lentejas con chorizo",
+    "category": ["carne", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 55,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 38,
+    "ingredients": [
+      { "name": "lentejas", "quantity": 300, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "salchicha", "quantity": 200, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Remojar las lentejas 30 minutos. Escurrir.",
+      "Sofreír cebolla, ajo y tomate. Agregar salchicha en rodajas.",
+      "Añadir lentejas, zanahoria y agua suficiente.",
+      "Condimentar con comino y sal.",
+      "Cocinar 35 minutos hasta que las lentejas estén tiernas."
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Pasta con espinaca y queso",
+    "category": ["pasta", "vegetariano", "saludable", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 25,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "espinaca", "quantity": 300, "unit": "g", "cost_per_unit": 0.03 },
+      { "name": "queso fresco", "quantity": 150, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Cocinar los fideos al dente. Escurrir.",
+      "Sofreír ajo en aceite. Agregar la espinaca y saltear 3 minutos.",
+      "Mezclar los fideos con la espinaca.",
+      "Agregar queso desmenuzado, sal y pimienta.",
+      "Servir caliente."
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Pollo en salsa de mostaza",
+    "category": ["pollo", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 48,
+    "ingredients": [
+      { "name": "pollo", "quantity": 600, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "mostaza", "quantity": 3, "unit": "cda", "cost_per_unit": 2 },
+      { "name": "crema de leche", "quantity": 150, "unit": "ml", "cost_per_unit": 0.05 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 }
+    ],
+    "steps": [
+      "Hervir las papas aparte.",
+      "Dorar el pollo en trozos con sal y pimienta.",
+      "Agregar ajo picado y sofreír.",
+      "Añadir mostaza y crema de leche.",
+      "Cocinar 10 minutos a fuego bajo.",
+      "Servir con papas hervidas."
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Carne con papas al horno",
+    "category": ["carne", "tradicional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 75,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 55,
+    "ingredients": [
+      { "name": "lomo de res", "quantity": 600, "unit": "g", "cost_per_unit": 0.1 },
+      { "name": "papa", "quantity": 6, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 4, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "orégano", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Marinar la carne con ajo, aceite, orégano, sal y pimienta.",
+      "Pelar y cortar las papas en gajos. Sazonar con sal.",
+      "Colocar la carne y las papas en fuente para horno.",
+      "Agregar cebolla en aros por encima.",
+      "Hornear a 180°C por 55 minutos.",
+      "Servir caliente."
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Revuelto de verduras con huevo",
+    "category": ["vegetariano", "saludable", "rápido", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 20,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 22,
+    "ingredients": [
+      { "name": "huevo", "quantity": 6, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "arveja", "quantity": 1, "unit": "taza", "cost_per_unit": 4 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "tomate", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Sofreír cebolla y zanahoria en cubos pequeños.",
+      "Agregar arveja y tomate. Saltear 3 minutos.",
+      "Batir los huevos con sal y verter sobre las verduras.",
+      "Revolver constantemente hasta cuajar.",
+      "Servir con arroz o pan."
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Risotto de pollo",
+    "category": ["pollo", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "difícil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 52,
+    "ingredients": [
+      { "name": "arroz", "quantity": 2, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "queso parmesano", "quantity": 80, "unit": "g", "cost_per_unit": 0.15 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "pimienta", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Sofreír cebolla y ajo. Agregar el pollo en trozos pequeños.",
+      "Añadir el arroz y tostar 2 minutos.",
+      "Agregar agua caliente de a poco (1 taza a la vez), revolviendo constantemente.",
+      "Continuar agregando agua por 25 minutos hasta que el arroz esté cremoso.",
+      "Incorporar queso rallado, sal y pimienta.",
+      "Servir inmediatamente."
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Ensalada de atún",
+    "category": ["pescado", "saludable", "rápido", "sin gluten", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 10,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 30,
+    "ingredients": [
+      { "name": "atún en lata", "quantity": 2, "unit": "unidad", "cost_per_unit": 8 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "pepino", "quantity": 1, "unit": "unidad", "cost_per_unit": 3 },
+      { "name": "limón", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Escurrir el atún.",
+      "Picar tomate, pepino y cebolla en cubos.",
+      "Mezclar todo con el atún.",
+      "Aderezar con limón, aceite y sal.",
+      "Servir fría."
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Sopa de pollo con arroz",
+    "category": ["sopa", "pollo", "saludable", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 45,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 32,
+    "ingredients": [
+      { "name": "pollo", "quantity": 500, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "arroz", "quantity": 1, "unit": "taza", "cost_per_unit": 3.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir el pollo con cebolla y ajo 25 minutos.",
+      "Retirar, desmenuzar y volver al caldo.",
+      "Agregar zanahoria en rodajas y arroz.",
+      "Cocinar 20 minutos. Ajustar sal.",
+      "Servir con perejil picado."
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Tallarín verde con pollo",
+    "category": ["pollo", "pasta", "saludable"],
+    "servings_base": 4,
+    "time_minutes": 35,
+    "difficulty": "media",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 42,
+    "ingredients": [
+      { "name": "fideos", "quantity": 400, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "pollo", "quantity": 400, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "espinaca", "quantity": 200, "unit": "g", "cost_per_unit": 0.03 },
+      { "name": "albahaca fresca", "quantity": 1, "unit": "ramita", "cost_per_unit": 3 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "queso fresco", "quantity": 100, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "aceite", "quantity": 3, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Cocinar el pollo con sal. Desmenuzar.",
+      "Licuar espinaca, albahaca, ajo, queso y aceite para la salsa verde.",
+      "Cocinar los fideos al dente.",
+      "Mezclar la salsa verde con los fideos calientes.",
+      "Agregar el pollo encima y servir."
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Guiso de garbanzos",
+    "category": ["vegetariano", "vegano", "saludable", "sin gluten", "internacional"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 28,
+    "ingredients": [
+      { "name": "garbanzos en lata", "quantity": 2, "unit": "unidad", "cost_per_unit": 7 },
+      { "name": "tomate", "quantity": 3, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "zanahoria", "quantity": 1, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Sofreír cebolla, ajo y zanahoria.",
+      "Agregar tomate triturado y comino. Cocinar 5 minutos.",
+      "Añadir los garbanzos escurridos.",
+      "Cocinar 15 minutos a fuego medio.",
+      "Ajustar sal y servir con arroz o pan."
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Pollo con papas en salsa",
+    "category": ["pollo", "tradicional", "sin gluten"],
+    "servings_base": 4,
+    "time_minutes": 50,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo", "cena"],
+    "estimated_cost_bob": 45,
+    "ingredients": [
+      { "name": "pollo", "quantity": 700, "unit": "g", "cost_per_unit": 0.06 },
+      { "name": "papa", "quantity": 4, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "tomate", "quantity": 2, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 3, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "aceite", "quantity": 2, "unit": "cda", "cost_per_unit": 1 },
+      { "name": "comino", "quantity": 1, "unit": "cdita", "cost_per_unit": 1 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 }
+    ],
+    "steps": [
+      "Dorar el pollo en trozos con aceite.",
+      "Sofreír cebolla, ajo y tomate picados.",
+      "Agregar el pollo, papas en cubos y agua.",
+      "Condimentar con comino y sal.",
+      "Cocinar 30 minutos hasta que las papas estén tiernas."
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Sopa de fideos con res",
+    "category": ["sopa", "carne", "tradicional"],
+    "servings_base": 4,
+    "time_minutes": 55,
+    "difficulty": "fácil",
+    "meal_type": ["almuerzo"],
+    "estimated_cost_bob": 35,
+    "ingredients": [
+      { "name": "carne de res", "quantity": 400, "unit": "g", "cost_per_unit": 0.08 },
+      { "name": "fideos finos", "quantity": 150, "unit": "g", "cost_per_unit": 0.04 },
+      { "name": "papa", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "zanahoria", "quantity": 2, "unit": "unidad", "cost_per_unit": 1.5 },
+      { "name": "cebolla", "quantity": 1, "unit": "unidad", "cost_per_unit": 2 },
+      { "name": "ajo", "quantity": 2, "unit": "diente", "cost_per_unit": 0.5 },
+      { "name": "sal", "quantity": 1, "unit": "cdita", "cost_per_unit": 0.5 },
+      { "name": "perejil", "quantity": 1, "unit": "ramita", "cost_per_unit": 1 }
+    ],
+    "steps": [
+      "Hervir la carne con cebolla, ajo y sal 35 minutos.",
+      "Agregar papa y zanahoria en trozos.",
+      "Cocinar 15 minutos. Añadir fideos.",
+      "Cocinar 5 minutos más. Ajustar sal.",
+      "Servir con perejil picado."
+    ]
+  }
+]
